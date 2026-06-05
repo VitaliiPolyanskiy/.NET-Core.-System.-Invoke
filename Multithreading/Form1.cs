@@ -17,7 +17,7 @@ namespace Multithreading
         {
             try
             {
-                // Создание анонимных делегатов
+                // Створення анонімних делегатів
                 Action Act1 = () =>
                 {
                     progressBar1.Minimum = 0;
@@ -36,13 +36,13 @@ namespace Multithreading
                     progressBar1.Value = a;
                 };
 
-                // Выполняет указанный делегат в том потоке, которому принадлежит базовый дескриптор окна элемента управления.
+                // Виконує вказаний делегат у тому потоці, якому належить базовий дескриптор вікна елемента управління.
                 Invoke(Act1);
 
                 for (int i = 0; i < 230; i++)
                 {
                     Thread.Sleep(50);
-                    // Выполняет указанный делегат в том потоке, которому принадлежит базовый дескриптор окна элемента управления.
+                    // Виконує вказаний делегат у тому потоці, якому належить базовий дескриптор вікна елемента управління.
                     Invoke(IW, i);
                     //progressBar1.Value = i;
                 }
@@ -56,12 +56,12 @@ namespace Multithreading
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Создание делегата функции, в которой будет работать новый поток
+            // Створення делегату функції, в якій працюватиме новий потік
             ThreadStart MethodThread = new ThreadStart(ThreadFunk);
-            // Создание объекта потока
+            // Створення об'єкта потоку
             Thread thread = new Thread(MethodThread);
             thread.IsBackground = true;
-            // Старт потока
+            // Старт потоку
             thread.Start();
         }
     }

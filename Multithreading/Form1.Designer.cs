@@ -60,7 +60,7 @@ namespace Multithreading
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Использование метода Invoke";
+            this.Text = "Використання методу Invoke";
             this.ResumeLayout(false);
 
         }
